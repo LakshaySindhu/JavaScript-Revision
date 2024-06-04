@@ -70,9 +70,31 @@ users = [
 ];
 
 // console.log(tinderUser);
-console.log(Object.keys(tinderUser));// Returns keys in the form of array
-console.log(Object.values(tinderUser)); // Return values in the form of array
+// console.log(Object.keys(tinderUser));// Returns keys in the form of array
+// console.log(Object.values(tinderUser)); // Return values in the form of array
 
-console.log(Object.entries(tinderUser)); // Returns Array of array where each array consists of key value pair of each property of an object
+// console.log(Object.entries(tinderUser)); // Returns Array of array where each array consists of key value pair of each property of an object
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+
+// ******************* Destructuring of Objects in JS ****************
+
+const course = {
+    courseName: "JS in Hindi",
+    price: "$99",
+    courseInstructor: "Hitesh"
+}
+
+course.courseInstructor = "Lakshay";
+
+const {courseInstructor : instructor} = course; // Destructuring 
+// Now we are no longer required to write full course.courseInstructor to access the value of property courseInstructor
+
+// here we have given alias name for courseInstructor : instructor
+
+console.log(instructor);
+
+
+// Basics of APIs 
+
