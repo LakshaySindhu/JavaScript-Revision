@@ -93,8 +93,117 @@ const {courseInstructor : instructor} = course; // Destructuring
 
 // here we have given alias name for courseInstructor : instructor
 
-console.log(instructor);
+// console.log(instructor);
 
+// Link to Learn more : https://chatgpt.com/share/0b6c1d7b-ce95-46c2-bca2-f2c2cb9aa10c
 
 // Basics of APIs 
+
+// const Person = {
+//     name: "Lakshay",
+//     age: 22,
+//     email: "lakshay@google.com",
+//     address:{
+//         city: "New Delhi",
+//         pincode: 110046
+//     }
+// }
+
+// Unpacking the properties of objects into distinct variables
+
+// syntax
+
+// const {name,age,email} = Person;
+
+// console.log(name);
+// console.log(age);
+// console.log(email);
+
+
+// Renaming the variables 
+
+// const {name:firstName, age: yearsOld, email: gmail} = Person;
+
+// console.log(firstName); // Lakshay
+// console.log(yearsOld);  // 22
+// console.log(gmail);     // lakshay@google.com
+
+// destructing and assigning default values 
+
+// const {name,age,phoneNo = "7303028589",email} = Person;
+
+// console.log(name);
+// console.log(age);
+// console.log(phoneNo);
+// console.log(email);
+
+// destructuring object having nested properties
+
+// const {name,age,address:{city,pincode}} = Person;
+
+// console.log(name);
+// console.log(age);
+// // console.log(address);  // Error => address in not defined
+// console.log(city);
+// console.log(pincode);
+
+
+// destruturing using res operator(...)
+
+// const {name,email,...rest} = Person;
+// console.log(name);
+// console.log(email);
+// console.log(rest);
+
+
+// Using destructuring in Function Parameter
+
+// const person = {
+//     name: 'John Doe',
+//     age: 30,
+//     job: 'Developer'
+//   };
+  
+//   function greet({ name, age }) {
+//     console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+//   }
+  
+//   greet(person); // Output: Hello, my name is John Doe and I am 30 years old.
+
+  const Employees = [
+    {
+        name: "Lakshay",
+        age: 22,
+        email: "lakshay@google.com"
+    },
+    {
+        name: "Shubham",
+        age: 22,
+        email: "shubhamsinghkashyap@google.com"
+    },
+    {
+        name: "Yuvraj",
+        age: 22,
+        email: "yuvirajput@google.com"
+    }
+
+  ]
+
+  const [{name:firstName1, age: yearsOld1, email:gmail1},{name:firstName2, age: yearsOld2, email:gmail2},]=Employees;
+
+  console.log(firstName1);
+  console.log(yearsOld1);
+  console.log(gmail1);
+
+  console.log(firstName2);
+  console.log(yearsOld2);
+  console.log(gmail2);
+  
+
+
+
+
+
+
+
 
