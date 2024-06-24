@@ -6,6 +6,7 @@ let yourScore = "100abc" // string
 
 let newScore = Number(yourScore); // value of yourScore = 100abc 
 // Its conversion is not possible, but in javascript it is converted that why when its value is displayed using console.log(newScore) -> NaN is getting displayed which means not a number
+
 // But the datatype of newScore will number only
 // console.log(newScore);
 // console.log(typeof(newScore));
@@ -53,8 +54,8 @@ let someValue = true;
 
 let valueInString = String(someValue);
 
-console.log(valueInString);
-console.log(typeof valueInString);
+// console.log(valueInString);
+// console.log(typeof valueInString);
 
 // Conversion to strings
 
@@ -63,6 +64,12 @@ console.log(typeof valueInString);
 // null => null
 // undefined => undefined
 // true => "true"
+
+let someString = "Lakshay";
+console.log(someString);
+console.log(typeof someString);
+
+
 
 
 

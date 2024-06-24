@@ -49,16 +49,20 @@
 // console.log(+true); // 1 -> Not a good practice
 // console.log(+""); // 0 -> Not a good practice
 
-let num1, num2, num3; 
-num1 = num2 = num3 ; // Not a good practice either 
-// Please write code that is more readable
+// let num1, num2, num3; 
+// num1 = num2 = num3 ; // Not a good practice either 
+// // Please write code that is more readable
 
-let gameCounter = 100;
-console.log(gameCounter); // 100
-gameCounter++; // 100
-console.log(gameCounter); // 101
-console.log(gameCounter++); // 101
-console.log(++gameCounter); // 103
+// let gameCounter = 100;
+// console.log(gameCounter); // 100
+// gameCounter++; // 100
+// console.log(gameCounter); // 101
+// console.log(gameCounter++); // 101
+// console.log(++gameCounter); // 103
+
+let someNum = 3;
+
+console.log(someNum+3+"6");
 
 
 
