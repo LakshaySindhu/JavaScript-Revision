@@ -58,13 +58,13 @@ const myFunction = function(){
 
 // 4.Undefined: Represents a variable that has been declared but hasn't been assigned a value yet. Example: let x;.
 
-// 5.Null:  standalone value it is represenataion of empty value it is special type and it is a object type. Example: let y = null; 
+// 5.Null:  standalone value it is representation of empty value it is special type and it is a object type. Example: let y = null; 
 
-// 6.Symbol (ES6): it is mostly used used to find uniqnece.
+// 6.Symbol (ES6): it is mostly used used to find uniqueness.
 
 // 7.BigInt (ES11): Represents large integers that cannot be represented by the Number type.
 
-//  Refence (Object Data Types):
+//  Reference (Object Data Types):
 
 // 1.Object: Represents a collection of key-value pairs (properties and methods). Example: { name: "John", age: 30 }.
 

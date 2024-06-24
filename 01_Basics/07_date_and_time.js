@@ -49,7 +49,6 @@ let myTimeStamp = Date.now(); // Returns value in Miliseconds
 // console.log(Date.now()/1000); // converted to seconds
 // console.log(Math.floor(Date.now()/1000)); // To Remove decimals
 
-
 let newDate = new Date(); 
 
 // console.log(newDate);
