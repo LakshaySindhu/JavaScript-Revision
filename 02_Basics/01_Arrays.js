@@ -59,13 +59,32 @@ const newJoinArr = someAnotherArr.join(); // Binds the array and convert it to s
 // console.log(typeof newJoinArr);
 
 const myArray = [0,1,2,3,4,5];
-console.log("Before : ",myArr);
+// console.log("Before : ",myArr);
 
 const myn1 = myArray.slice(1,3); // To create a shallow copy of a portion of an array into a new array without modifying the original array.
-console.log("After Slice : ",myArray);
-console.log(myn1);
+// console.log("After Slice : ",myArray);
+// console.log(myn1);
 
 const myn2 = myArray.splice(1,3); // To change the contents of an array by removing, replacing, or adding elements in place. This method modifies the original array.
-console.log("After Splice : ",myArray); 
-console.log(myn2);
+// console.log("After Splice : ",myArray); 
+// console.log(myn2);
+
+
+// Splice in js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, add "Lemon" and "Kiwi":
+const spliceFruits = fruits.splice(2, 0, "Lemon", "Kiwi");
+
+console.log(fruits);
+console.log(spliceFruits);
+
+// Create an Array
+const someFruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, remove 2 items
+const spliceSomeFruits = someFruits.splice(2, 2);
+
+console.log(someFruits);
+console.log(spliceSomeFruits);
 

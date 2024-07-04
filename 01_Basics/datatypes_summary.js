@@ -54,7 +54,7 @@ const myFunction = function(){
  
 // 2.String: Represents a sequence of characters enclosed in single or double quotes. Example: "Hello, world!".
 
-// 3,Boolean: Represents a binary value, either true or false, often used for conditional logic.
+// 3.Boolean: Represents a binary value, either true or false, often used for conditional logic.
 
 // 4.Undefined: Represents a variable that has been declared but hasn't been assigned a value yet. Example: let x;.
 
@@ -77,7 +77,6 @@ const myFunction = function(){
 // 5.RegExp: Represents regular expressions for pattern matching.
 
 
-
 // lets talk about some Range of Primitive DataType:
 
 // 1.Number: Represents both integers and floating-point numbers.
@@ -97,13 +96,13 @@ const myFunction = function(){
 //  It has only one possible value: undefined.
 
 //  5.Null: Represents the intentional absence of any object or 
-//  value.It has only one possible value: null.
+//  value. It has only one possible value: null.
 
 //  6.Symbol (ES6): Represents a unique and immutable value.
 //  No specific range limit.
 
 //  7.BigInt (ES11): Represents large integers that cannot be 
-//  represented by the Number type.The range is practically 
+//  represented by the Number type. The range is practically 
 //  unlimited and depends on available memory
 
  
