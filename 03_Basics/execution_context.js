@@ -21,6 +21,14 @@ one();
 // 3. Eval Execution Context
 
 
+// Whenever the execution of javascript code begin, firstly global execution context is created and this in javascript code in global scope points to global execution context, which depends on the environment in which the javascript code is executed
+
+// In browser -> Window object is global execution context and this will point to window object
+
+// In javascript runtime for eg - node -> the global object is the global execution context and this will point to this global object. But in case of strict it will point to null or empty object {}
+
+// 
+
 
 let num1 = 10;
 let num2 = 5;
@@ -97,3 +105,21 @@ console.log(addNum(10,29));
 // -> Variables within the function context are scoped to that function call.
 // -> The console.log statements output the results of the function calls.
 
+
+
+// The working of the JavaScript works on three phases:
+// 1. Global Execution Context
+// 2. Memory phase / Creation phase
+// 3. Execution phase
+
+// Phase 1: Global Execution Context
+// The value of `this` keyword is set to Global Execution Context (which is an empty Object in NODE environment, & window object in browser environment)
+
+// Phase 2: Memory phase
+// During this phase, JS engine scans the code and assigns the initial values for the variables , functions, etc.. For variables they are 'undefined' and for functions they are set to their function definition
+
+// Phase 3: Execution phase
+// After the creation phase completed, the execution phase begins where actual values of the variables are set. And when the functions are called it creates a new 'Function Execution' context which consists of two phases (they works same as explained above but only for the particular function scope):
+// 1. Memory phase 
+// 2. Execution phase 
+// The return value of the 'Function Execution' context is passed to the Global Execution Context
