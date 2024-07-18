@@ -21,7 +21,7 @@ function printme(item){
 // friends.forEach(printme);
 
 friends.forEach( (item,index,arr) => {
-    // console.log(item,index,arr);
+    console.log(item,index,arr);
 })
 
 const Coding = [
@@ -40,5 +40,5 @@ const Coding = [
 ]
 
 Coding.forEach( (item) => {
-    console.log(`${item.language} : ${item.extension}`);
+    // console.log(`${item.language} : ${item.extension}`);
 })
