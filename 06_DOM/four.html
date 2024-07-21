@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a New Element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+    
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "parent-div";
+    div.id = Math.round(Math.random()*100+1);
+    div.setAttribute("title","Div Title");
+    div.style.backgroundColor="green";
+    div.style.padding="15px";
+
+    // The Element created is not getting displayed on the page because till now the element is in the memory only, not attached to the document or page
+
+    // To attach element to the page or document
+    
+    // setAttribute method is better for page optimization as compared to .attribute 
+    // because .attribute overwrite the values, it first select and fetch the value then it overwrite the previous value with the new one
+    // In case of setAttribute method it doesn't fetch the value first, it directly update the value with the value specified, so one round trip is saved almost in case of set attribute
+
+    // div.innerHTML = "Hey, I am Main Div";
+
+    // Better way of writing code in terms of optimization
+    const addText = document.createTextNode("Hey, I am Main Div");
+    div.appendChild(addText);
+
+    document.body.appendChild(div);
+
+</script>
+</html>
