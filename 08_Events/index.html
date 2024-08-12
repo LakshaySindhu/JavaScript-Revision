@@ -2,38 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                li {
+                        padding: 5px;
+                }
+        </style>
 </head>
 
 <body style="background-color: #414141; color: aliceblue">
+        <h2>Amazing Images</h2>
+        <div>
+                <ul id="images">
+                        <li><img width="200px" height="150px" id="mocktail"
+                                        src="images/abiwin-krisna-e4S2q-YRsis-unsplash.jpg" alt=""></li>
 
-    <h2>Amazing Images</h2>
+                        <li><img width="200px" height="150px" id="cake"
+                                        src="images/aditya-saxena-8blgWTw3G9M-unsplash.jpg" alt=""></li>
 
-    <div>
-        <ul id="images">
-            <li><img width="200px" height="150px" id="mocktail" src="images/abiwin-krisna-e4S2q-YRsis-unsplash.jpg"
-                    alt=""></li>
+                        <li><img width="200px" height="150px" id="pulse"
+                                        src="images/aditya-saxena-reGHEwY7wYo-unsplash.jpg" alt=""></li>
 
-            <li><img width="200px" height="150px" id="cake" src="images/aditya-saxena-8blgWTw3G9M-unsplash.jpg"
-                    alt=""></li>
+                        <li><img width="200px" height="150px" id="breakfast"
+                                        src="images/axel-bimashanda-3v71Fsgt3-8-unsplash.jpg" alt=""></li>
 
-            <li><img width="200px" height="150px" id="pulse" src="images/aditya-saxena-reGHEwY7wYo-unsplash.jpg"
-                    alt=""></li>
+                        <li><img width="200px" height="150px" id="lunch"
+                                        src="images/axel-bimashanda-DSGzBzc3qRQ-unsplash.jpg" alt=""></li>
 
-            <li><img width="200px" height="150px" id="breakfast" src="images/axel-bimashanda-3v71Fsgt3-8-unsplash.jpg"
-                    alt=""></li>
+                        <li><img width="200px" height="150px" id="cocktail"
+                                        src="images/carlos-rodriguez-AphCaJqpVLY-unsplash.jpg" alt=""></li>
 
-            <li><img width="200px" height="150px" id="lunch" src="images/axel-bimashanda-DSGzBzc3qRQ-unsplash.jpg"
-                    alt=""></li>
+                        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
 
-            <li><img width="200px" height="150px" id="cocktail" src="images/carlos-rodriguez-AphCaJqpVLY-unsplash.jpg"
-                    alt=""></li>
-        </ul>
 
-    </div>
-
+                </ul>
+        </div>
 </body>
+<script>
+        // Not a good practice
+        // document.getElementById('mocktail').onclick = function(){
+        //         alert("You Clicked on Mocktail");
+        // }
+
+        // Directly injecting onclick or any other event handler in HTML code can lead to several issues, both in terms of security and maintainability.
+
+        // Best Practices : 
+
+        // External JavaScript: Best practices suggest attaching event handlers using JavaScript (e.g., addEventListener) or via frameworks (e.g., jQuery). This keeps the HTML clean and ensures that all behavior-related logic is centralized in the JavaScript files.
+
+        // attachEvent
+        // jQuery - on
+
+        // Best approach/Practice
+        // document.getElementById('pulse').addEventListener('click',function(e){
+        //         console.log(e);
+        // }, false) // Third parameter in addEventListener is by default false only but in some application or usecases you are explicitly required to specify it as false
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget
+        // client position, client offset, screenX and screenY coord
+        // altkey, ctrlkey, shiftkey, keyCode
+
+        // Event Propogation and Event Bubbling 
+        // Event Bubbling - Bubble always goes from down to Up
+        // Similarly bottom event is invoked before top event 
+
+        // Capturing Mode - To enable it, explicitly pass true as third parameter in addEventListener()
+        // Incase of capturing mode events are propogated from top to bottom
+
+        // In industry mostly Event Bubbling is used 
+
+        // document.getElementById('images').addEventListener('click', function (e) {
+        //         console.log('Clicked Inside ul');
+        // }, false)
+
+
+        // document.getElementById('pulse').addEventListener('click', function (e) {
+        //         console.log('Owl Clicked')
+        //         e.stopPropagation() // This ensures that event is not propogated from bottom to top
+
+        // }, false)
+
+        // Using preventDefault 
+
+        // document.getElementById('google').addEventListener('click',function(e){
+        //         e.preventDefault();
+        //         e.stopPropagation();
+        //         console.log("Google Clicked");
+
+        // }, false)
+
+        document.querySelector('#images').addEventListener('click',function(e){
+                // console.log(e.target.parentNode);
+                // let removeIt = e.target.parentNode;
+                // removeIt.remove();
+                // removeIt.parentNode.removeChild(removeIt);
+                // removeIt => li
+                // removeIt.parentNode => ul
+                // ul.removeChild(removeIt) => this removes the child element specified
+
+                // The above code is having an issue, if we are clicking on image then it is ok but if we are clicking on li then it is removing all the elements 
+                // To resolve the above issue we have to handle it with conditionals 
+
+                console.log(e.target.tagName);
+                if(e.target.tagName === 'IMG'){
+                        let removeIt = e.target.parentNode;
+                        removeIt.remove();
+                }
+
+        }, false)
+
+
+</script>
 
 </html>
